@@ -1,7 +1,6 @@
-// app/admin/dashboard/subDash/page.tsx
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
 export default function SubDashPage() {
@@ -15,11 +14,13 @@ export default function SubDashPage() {
   return (
     <div>
       <h1>Sub Dashboard</h1>
-      {id ? (
-        <p onClick={() => router.back()}>Sub Dashboard ID: {id}</p>
-      ) : (
-        <p>No ID specified</p>
-      )}
+      <Suspense fallback={<div>Loading SubDash...</div>}>
+        {id ? (
+          <p onClick={() => router.back()}>Sub Dashboard ID: {id}</p>
+        ) : (
+          <p>No ID specified</p>
+        )}
+      </Suspense>
     </div>
   );
 }

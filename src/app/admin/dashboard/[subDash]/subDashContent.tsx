@@ -3,10 +3,13 @@
 import React from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 
-export default function SubDashContent({ subDashId }: { subDashId: string }) {
-  const router = useRouter();
+export default function SubDashContent() {
   const searchParams = useSearchParams();
-  const id = searchParams.get("id") || subDashId;
+  const router = useRouter();
+
+  // Use query parameter if present, otherwise fallback to subDashId
+  const id = searchParams.get("id");
+
   return (
     <div>
       <h1>Sub Dashboard</h1>

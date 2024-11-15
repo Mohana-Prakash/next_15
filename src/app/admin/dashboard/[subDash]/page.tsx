@@ -1,18 +1,11 @@
 import React, { Suspense } from "react";
 import SubDashContent from "./subDashContent";
 
-interface SubDashPageProps {
-  params: { subDash: string };
-}
-
-export default function SubDashPage({ params }: SubDashPageProps) {
+export default function SubDashPage() {
   return (
     <Suspense fallback={<div>Loading SubDash...</div>}>
-      <SubDashContent subDashId={params.subDash} />
+      {/* Pass subDashId to SubDashContent */}
+      <SubDashContent />
     </Suspense>
   );
-}
-
-export async function generateStaticParams() {
-  return [{ subDash: "subDash" }];
 }

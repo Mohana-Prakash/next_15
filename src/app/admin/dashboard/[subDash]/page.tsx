@@ -1,11 +1,11 @@
 import React, { Suspense } from "react";
 import SubDashContent from "./subDashContent";
 
-export default function SubDashPage({
-  params,
-}: Readonly<{
+interface SubDashPageProps {
   params: { subDash: string };
-}>) {
+}
+
+export default function SubDashPage({ params }: SubDashPageProps) {
   return (
     <Suspense fallback={<div>Loading SubDash...</div>}>
       <SubDashContent subDashId={params.subDash} />

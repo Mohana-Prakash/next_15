@@ -12,15 +12,16 @@ export default function SubDashPage() {
   console.log(id, pathname);
 
   return (
-    <div>
-      <h1>Sub Dashboard</h1>
-      <Suspense fallback={<div>Loading SubDash...</div>}>
+    <Suspense fallback={<div>Loading SubDash...</div>}>
+      <div>
+        <h1>Sub Dashboard</h1>
+
         {id ? (
           <p onClick={() => router.back()}>Sub Dashboard ID: {id}</p>
         ) : (
           <p>No ID specified</p>
         )}
-      </Suspense>
-    </div>
+      </div>
+    </Suspense>
   );
 }

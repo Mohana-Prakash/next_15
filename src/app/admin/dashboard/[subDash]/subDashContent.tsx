@@ -1,16 +1,12 @@
 "use client";
 
 import React from "react";
-import { useSearchParams, usePathname, useRouter } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 
-export default function SubDashContent() {
+export default function SubDashContent({ subDashId }: { subDashId: string }) {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const pathname = usePathname();
-  const id = searchParams.get("id");
-
-  console.log(id, pathname);
-
+  const id = searchParams.get("id") || subDashId;
   return (
     <div>
       <h1>Sub Dashboard</h1>

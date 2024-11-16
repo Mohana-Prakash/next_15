@@ -3,7 +3,7 @@ import SubDashContent from "./subDashContent";
 
 export default function SubDashPage() {
   return (
-    <Suspense fallback={<div>Loading SubDash...</div>}>
+    <Suspense fallback={<div>Loading...</div>}>
       {/* Pass subDashId to SubDashContent */}
       <SubDashContent />
     </Suspense>

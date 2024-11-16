@@ -1,3 +1,34 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "next/core-web-vitals"
+  ],
+  
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "js": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true
+  },
+  "plugins": ["react", "prettier", "unused-imports"],
+  "rules": {
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "react/no-unescaped-entities": 0,
+    "@next/next/no-img-element": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": "error",
+    "max-lines": ["error", { "max": 1700 }],
+    "no-unused-vars": "error"
+  }
 }

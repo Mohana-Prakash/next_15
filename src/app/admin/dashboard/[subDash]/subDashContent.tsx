@@ -12,6 +12,8 @@ export default function SubDashContent() {
 
   return (
     <div>
+
+
       <h1>Sub Dashboard</h1>
       {id ? (
         <p onClick={() => router.back()}>Sub Dashboard ID: {id}</p>

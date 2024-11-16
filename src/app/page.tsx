@@ -1,9 +1,17 @@
-import React from 'react'
+"use client"
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
-function Page() {
+export default function SubDash() {
+  const router = useRouter();
+
+  // useEffect(() => {
+  //   router.push("/login");
+  // }, [router]);
+
   return (
-    <div>Page</div>
-  )
+    <div>
+      <h1 onClick={()=>router.push("/admin/dashboard")}>You need to log in to access this page</h1>
+    </div>
+  );
 }
-
-export default Page

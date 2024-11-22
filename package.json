@@ -14,19 +14,30 @@
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^6.1.7",
     "@mui/material": "^6.1.7",
+    "axios": "^1.7.7",
+    "dayjs": "^1.11.6",
+    "flatpickr": "^4.6.13",
+    "flowbite-react": "^0.10.2",
+    "moment": "^2.30.1",
     "next": "15.0.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-flatpickr": "^3.10.13",
+    "react-hot-toast": "^2.4.1",
+    "react-tailwindcss-datepicker": "^1.7.2",
+    "swagger-ui": "^5.18.2",
+    "swagger-ui-react": "^5.18.2"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8",
     "eslint-config-next": "15.0.3",
-    "postcss": "^8",
+    "postcss": "^8.4.49",
     "prettier": "^3.3.3",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^3.4.15",
     "typescript": "^5"
   }
 }
